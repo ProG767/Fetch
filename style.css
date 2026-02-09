@@ -1,0 +1,230 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+.text-sm { font-size: 14px; }
+.text-md { font-size: 16px; }
+
+.p-15 { padding: 15px; }
+.p-10 { padding: 10px; }
+
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+
+.no-deco { text-decoration: none; }
+
+
+h1 {
+text-align: start;
+font-size: 15px;
+margin-top: 25px;
+margin-bottom: 25px;
+padding:15px;
+}
+
+
+
+.container {
+text-align: start;
+
+font-size: 15px;
+margin-top: 25px;
+margin-bottom: 25px;
+padding: 15px;
+}
+
+.container ul {
+list-style:none; 
+border : 1 px solid red;
+}
+
+
+p {
+text-align: start;
+font-size: 15px;
+margin-top: 25px;
+margin-bottom: 25px;
+padding:15px;
+}
+
+
+#contact {
+background: grey;
+margin: 0 20px;
+padding-bottom: 20px;
+padding-left: 10px;
+padding-right: 10px;
+border-radius: 5px;
+}
+
+form {
+display: flex;
+flex-direction: column;
+}
+
+form>div {
+display: flex;
+flex-direction: column;
+margin: 5px;
+}
+
+form label {
+font-weight: bold;
+}
+
+
+form input {
+height: 30px;
+padding: 5px;
+}
+
+form button {
+border: 1px;
+border-radius: 5px;
+margin-top: 10px;
+height: 30px;
+}
+
+
+.msg-b {
+background: cadetblue;
+height: 30px;
+border-radius: 5px;
+padding: 5px;
+margin: 5px;
+}
+
+.msg-g {
+background: greenyellow;
+height: 30px;
+border-radius: 5px;
+padding: 5px;
+margin: 5px;
+}
+
+.msg-r {
+background: orangered;
+height: 30px;
+border-radius: 5px;
+padding: 5px;
+margin: 5px;
+}
+
+
+.list-group {
+margin: 32px ;
+padding: 10px;
+list-style: none;
+border-radius: 6px;
+overflow: hidden;
+border: 1px solid #d0d7de;
+width: 50%;
+
+}
+
+
+.list-group-item {
+padding: 8px 12px;
+border-bottom: 1px solid #d0d7de;
+background: white;
+font-size: 14px;
+}
+
+.btn {
+background: #0969da;
+color: white;
+padding: 8px 14px;
+border-radius: 6px;
+margin: 10px;
+}
+
+/* même classe, juste un état */
+.btn:hover {
+background: #074fa5;
+}
+
+
+
+.btn-g{
+background: forestgreen;
+color: white;
+padding: 8px 14px;
+border-radius: 6px;
+margin: 10px;
+}
+
+/* même classe, juste un état */
+.btn-g:hover {
+background: green;
+}
+
+
+.btn-v{
+background: blueviolet;
+color: white;
+padding: 8px 14px;
+border-radius: 6px;
+margin: 10px;
+}
+
+/* même classe, juste un état */
+.btn-v:hover:hover {
+background: violet;
+}
+
+
+
+
+
+.btn-danger {
+text-decoration: none;
+background: red;
+border-radius: 5px;
+padding: 5px 5px;
+margin-top: 2px;
+width: 100%;
+}
+
+
+.input {
+border: 1px solid #d0d7de;
+}
+
+.input:hover {
+border-color: #a6b1bb;
+}
+
+.input:focus {
+border-color: #0969da;
+box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+}
+
+
+/*division en 3 colonnes*/
+
+.grid-1 {
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+gap: 20px;
+padding : 6px 8px;
+
+}
+
+
+
+.grid-3 {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.card {
+list-style : none;
+border: 1px solid #ddd;
+padding: 12px;
+border-radius: 8px;
+background: #fff;
+width: 50%;
+}
+ 
