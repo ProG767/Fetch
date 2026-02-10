@@ -1,3 +1,4 @@
+// selection des boutons dans le DOM
 const name = document.querySelector("#name");
 const mail = document.querySelector("#mail");
 const form = document.querySelector("form");
@@ -5,6 +6,7 @@ const output = document.querySelector("#output");
 const addGit = document.querySelector("#gitBtn")
 
 
+//ajoute d'évènement boutton suppression
 output.addEventListener("click",(e)=>{
 const btn = e.target.closest(".btn-danger");
 if(!btn) return;
@@ -13,8 +15,7 @@ btn.closest(".card").remove();
 });
 
 
-
-
+//class gestion des contacts
 class Contact{
 constructor(rname,rmail){
 this.rname=rname;
@@ -23,6 +24,7 @@ this.rmail=rmail;
 }
 
 
+// class des messages réutilisable 
 class Interface {
 static mesSage(message,className) {
 const div = document.createElement("div");
@@ -47,9 +49,9 @@ li.appendChild(document.createTextNode(item));
 ul.appendChild(li);
 const list = document.querySelector("#list");
 
-
 });
 
+//création du bouton supprimer de ul
 const liBtn = document.createElement("li");
 liBtn.className = "list-group-item";
 const a = document.createElement("a");
@@ -64,7 +66,6 @@ list.appendChild(ul);
 }
 
 
-
 static supCont(btn){
 const ul = btn.closest("ul");
 if(ul) ul.remove(); 
@@ -74,8 +75,7 @@ if(ul) ul.remove();
 };
 
 
-
-
+//ajoute d'évènement boutton suppression
 form.addEventListener("submit", (e)=>{
 e.preventDefault();
 
@@ -92,7 +92,7 @@ console.log(" yes");
 }
 });
 
-
+//ajoute selection et évènement boutton suppression
 document.querySelector("#list").addEventListener("click",(e)=> {
 if (!e.target.classList.contains("btn-danger")) return;
 
@@ -166,7 +166,7 @@ addGit.addEventListener("click", (e)=> {
     } else {
 
         fetch("https://api.github.com/users",{
-            method: 'POST'
+            method: 'POST',
             body: JSON.stringlify({
                 title: name.value,
                 body: mail.value,
