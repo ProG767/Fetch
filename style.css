@@ -3,6 +3,30 @@ margin: 0;
 padding: 0;
 }
 
+
+.toast {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  min-width: 260px;
+  max-width: 92vw;
+
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #111;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* variantes */
+.toast.msg-b { background: cadetblue; }
+.toast.msg-g { background: greenyellow; }
+.toast.msg-r { background: orangered; color: white; }
+
+
+
 .text-sm { font-size: 14px; }
 .text-md { font-size: 16px; }
 
@@ -36,7 +60,7 @@ padding: 15px;
 
 .container ul {
 list-style:none; 
-border : 1 px solid red;
+border : 1px solid red;
 }
 
 
@@ -176,7 +200,7 @@ background: violet;
 
 
 
-
+/*bouton supp*/
 .btn-danger {
 text-decoration: none;
 background: red;

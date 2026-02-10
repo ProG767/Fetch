@@ -71,7 +71,6 @@ const ul = btn.closest("ul");
 if(ul) ul.remove(); 
 }
 
-
 };
 
 
@@ -79,9 +78,8 @@ if(ul) ul.remove();
 form.addEventListener("submit", (e)=>{
 e.preventDefault();
 
-
-if(name.value === ""||mail.value === ""){
-Interface.mesSage("veuillez remplir les champs","btn-g");
+    if(name.value === ""||mail.value === ""){
+    Interface.mesSage("veuillez remplir les champs","btn-g");
 
 console.log("no");
 } else {
@@ -94,7 +92,7 @@ console.log(" yes");
 
 //ajoute selection et évènement boutton suppression
 document.querySelector("#list").addEventListener("click",(e)=> {
-if (!e.target.classList.contains("btn-danger")) return;
+    if (!e.target.classList.contains("btn-danger")) return;
 
 e.preventDefault();
 Interface.supCont(e.target);
@@ -109,13 +107,13 @@ let html = "";
 fetch("https://jsonplaceholder.typicode.com/users")
 .then((res)=> res.json())
 .then((data)=>{
-data.forEach(item =>{
-html += `
-<ul class ="card">
-<li>${item.name}</li>
-<li>${item.email}</li>
-<button class="btn-danger">X</button>
-</ul>
+    data.forEach(item =>{
+    html += `
+    <ul class ="card">
+        <li>${item.name}</li>
+        <li>${item.email}</li>
+        <button class="btn-danger">X</button>
+    </ul>
 
 `
 
@@ -162,19 +160,19 @@ console.log(data);
 
 addGit.addEventListener("click", (e)=> {
     if (name.value === "" || mail.value === ""){
-        mesSage ("veuillez remplir tout les champs", "btn-g"); 
+        Interface.mesSage ("merci de remplir tout les champs svp", "btn-g"); 
     } else {
 
         fetch("https://api.github.com/users",{
             method: 'POST',
-            body: JSON.stringlify({
+            body: JSON.stringify({
                 title: name.value,
                 body: mail.value,
             }),
             headers: {
                 'content-type' : 'application/json; charset=UTF-!',
             },
-    })
+        })
 
     .then((response) => response.json())
     .then((json)=> console.log(json)); 
